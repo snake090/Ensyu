@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- ビューポートの設定 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- スタイルシートの読み込み -->
+<link href="modal-keep-position.css" rel="stylesheet">
+<title>会員情報消去</title>
+</head>
+<body>
+<body>
+	<!--  <form action ="CompanySelect.html" method="POST" class="popup_btn">-->
+	協賛企業名<br>
+	<input type="text" name="変数名を入力"><br>
+	<!--  <input type="submit" value="検索" ><br><br>-->
+    <p><button id="modal-open" class="button-link">検索</button></p>
+	<!--</form>-->
+
+		会員情報入力<br><br>
+		<!-- 企業が存在すれば表示 -->
+<table>
+  <tr>
+  	<td>会員番号</td>
+    <td>氏名</td>
+    <td>フリガナ</td>
+    <td>入会日</td>
+    <td>与信額</td>
+    <td>備考</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>228</td	>
+    <td>西沢順子</td>
+    <td>ニシザワジュンコ</td>
+    <td>2015/1/7</td>
+    <td>50,000</td>
+   </tr>
+</table><br><br>
+	<form action ="MemberDelConf.html" method="POST">
+
+		<input type="submit" value="消去"><br><br>
+	</form>
+
+		<hr>
+	<p><a href ="MemberMenu.html">会員情報管理画面に戻る</a></p>
+<!-- ここからモーダルウィンドウ -->
+<div id="modal-content">
+	<!-- モーダルウィンドウのコンテンツ開始 -->
+	<p>協賛企業名選択</p>
+	<form action="MemberDelete.html" method="POST">
+	<input type="radio" name="変数名を入力" value="1">ロータス自動車<br>
+	<input type="radio" name="変数名を入力" value="2">ロータスバイク<br><br>
+	<input type="submit" value="決定">
+	</form>
+	<hr>
+	<p><a id="modal-close" class="button-link">閉じる</a></p>
+	<!-- モーダルウィンドウのコンテンツ終了 -->
+</div>
+<!-- ここまでモーダルウィンドウ -->
+<!-- JavaScriptの読み込み -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="modal-keep-position.js"></script>
+</body>
+</html>
